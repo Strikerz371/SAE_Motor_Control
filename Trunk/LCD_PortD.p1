@@ -1038,6 +1038,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD_PortD.h: 10: void LCD_Move(unsigned char Row, unsigned char Col);
 [; ;LCD_PortD.h: 12: void LCD_Write(unsigned char c);
 [; ;LCD_PortD.h: 14: void LCD_Init(void);
+[; ;LCD_PortD.h: 16: void LCD_Out(unsigned int DATA, unsigned char N);
 "19 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.C
 [v _Wait_ms `(v 1 ef1`ui ]
 {
@@ -1256,4 +1257,69 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD_PortD.C: 85: }
 "85
 [e :UE 129 ]
+}
+"88
+[v _LCD_Out `(v 1 ef2`ui`uc ]
+{
+[; ;LCD_PortD.C: 87: void LCD_Out(unsigned int DATA, unsigned char N)
+[; ;LCD_PortD.C: 88: {
+[e :U _LCD_Out ]
+[v _DATA `ui 1 r1 ]
+[v _N `uc 1 r2 ]
+[f ]
+"89
+[v _A `uc -> 5 `i a ]
+[v _i `uc 1 a ]
+[; ;LCD_PortD.C: 89: unsigned char A[5], i;
+[; ;LCD_PortD.C: 91: for (i=0; i<5; i++) {
+"91
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 131  ]
+[e $U 132  ]
+[e :U 131 ]
+{
+[; ;LCD_PortD.C: 92: A[i] = DATA % 10;
+"92
+[e = *U + &U _A * -> _i `ux -> -> # *U &U _A `ui `ux -> % _DATA -> -> 10 `i `ui `uc ]
+[; ;LCD_PortD.C: 93: DATA = DATA / 10;
+"93
+[e = _DATA / _DATA -> -> 10 `i `ui ]
+"94
+}
+"91
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 131  ]
+[e :U 132 ]
+"94
+}
+[; ;LCD_PortD.C: 94: }
+[; ;LCD_PortD.C: 95: for (i=5; i>0; i--) {
+"95
+{
+[e = _i -> -> 5 `i `uc ]
+[e $ > -> _i `i -> 0 `i 134  ]
+[e $U 135  ]
+[e :U 134 ]
+{
+[; ;LCD_PortD.C: 96: if (i == N) LCD_Write('.');
+"96
+[e $ ! == -> _i `i -> _N `i 137  ]
+[e ( _LCD_Write (1 -> -> 46 `ui `uc ]
+[e :U 137 ]
+[; ;LCD_PortD.C: 97: LCD_Write(A[i-1] + '0');
+"97
+[e ( _LCD_Write (1 -> + -> *U + &U _A * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _A `ui `ux `ui -> 48 `ui `uc ]
+"98
+}
+"95
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 134  ]
+[e :U 135 ]
+"98
+}
+[; ;LCD_PortD.C: 98: }
+[; ;LCD_PortD.C: 99: }
+"99
+[e :UE 130 ]
 }

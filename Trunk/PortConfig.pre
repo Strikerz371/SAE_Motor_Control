@@ -1194,7 +1194,7 @@ extern void _delay(unsigned long);
 #pragma inline(_delay3)
 extern void _delay3(unsigned char);
 
-# 4 "E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c"
+# 5 "E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c"
 void PortInit (void)
 {
 TRISA = 1;

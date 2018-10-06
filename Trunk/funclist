@@ -1,10 +1,15 @@
-_Wait_ms: CODE, 5244 0 126
-_LCD_Inst: CODE, 5370 0 78
-_IntServe: CODE, 4820 0 164
-_main: CODE, 4238 0 582
-_LCD_Move: CODE, 4984 0 132
-_LCD_Strobe: CODE, 5562 0 20
-_LCD_Pause: CODE, 5508 0 54
-_LCD_Write: CODE, 5448 0 60
-_LCD_Init: CODE, 5116 0 128
-Total: 1344
+_Wait_ms: CODE, 5798 0 126
+_LCD_Inst: CODE, 5924 0 78
+_IntServe: CODE, 5222 0 164
+_main: CODE, 4238 0 364
+_LCD_Out: CODE, 4602 0 270
+_LCD_Move: CODE, 5538 0 132
+_LCD_Strobe: CODE, 6144 0 20
+_LCD_Pause: CODE, 6062 0 54
+___lwdiv: CODE, 4872 0 184
+_LCD_Write: CODE, 6002 0 60
+_LCD_Init: CODE, 5670 0 128
+___lwmod: CODE, 5386 0 152
+_A2D_Read: CODE, 6116 0 28
+_init: CODE, 5056 0 166
+Total: 1926

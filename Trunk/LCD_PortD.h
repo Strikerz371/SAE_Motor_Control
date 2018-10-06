@@ -12,3 +12,5 @@ void LCD_Move(unsigned char Row, unsigned char Col);
 void LCD_Write(unsigned char c);
 
 void LCD_Init(void);
+
+void LCD_Out(unsigned int DATA, unsigned char N);

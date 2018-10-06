@@ -84,5 +84,19 @@ void LCD_Init(void)
    LCD_Inst(0x06);
    }
 
+void LCD_Out(unsigned int DATA, unsigned char N)
+{
+   unsigned char A[5], i;
+   
+   for (i=0; i<5; i++) {
+      A[i] = DATA % 10;
+      DATA = DATA / 10;
+   }
+   for (i=5; i>0; i--) {
+      if (i == N) LCD_Write('.');
+      LCD_Write(A[i-1] + '0');
+   }
+}
+
    
 

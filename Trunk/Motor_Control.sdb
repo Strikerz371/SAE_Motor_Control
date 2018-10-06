@@ -4,7 +4,13 @@
 [d chip 18F4620 ]
 "2 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\Interupt.h
 [v F3 `(v  1 t 0 ]
-"34 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+"5 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+"5 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+"35 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _init `(v  1 e 0 0 ]
+"82
 [v _main `(i  1 e 2 0 ]
 "14 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\Interupt.c
 [v _IntServe `I(v  1 e 0 0 ]
@@ -22,6 +28,10 @@
 [v _LCD_Write `(v  1 e 0 0 ]
 "76
 [v _LCD_Init `(v  1 e 0 0 ]
+"88
+[v _LCD_Out `(v  1 e 0 0 ]
+"27 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _A2D_Read `(i  1 e 2 0 ]
 "65 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
 [v _TMR0 `VNui  1 e 2 @4054 ]
 "66
@@ -82,8 +92,8 @@
 [v _RD2 `VNb  1 e 0 @31770 ]
 "619
 [v _RD3 `VNb  1 e 0 @31771 ]
-"632
-[v _RC5 `VNb  1 e 0 @31765 ]
+"628
+[v _RC1 `VNb  1 e 0 @31761 ]
 "633
 [v _RC6 `VNb  1 e 0 @31766 ]
 "634
@@ -108,48 +118,98 @@
 [v _MSG6 `DC[20]uc  1 e 20 0 ]
 "24
 [v _MSG7 `DC[20]uc  1 e 20 0 ]
-"26
-[v _on `ui  1 e 2 @2 ]
-[v _lit `ui  1 e 2 @7 ]
-[v _time `ui  1 e 2 @5 ]
-[v _pump `ui  1 e 2 @0 ]
-[v _bump `ui  1 e 2 @15 ]
-[v _gas `ui  1 e 2 @13 ]
-"28
-[v _i `uc  1 e 1 @4 ]
+"25
+[v _A2D `i  1 e 2 @11 ]
+"27
+[v _on `ui  1 e 2 @0 ]
+[v _lit `ui  1 e 2 @2 ]
+[v _time `ui  1 e 2 @7 ]
+[v _pump `ui  1 e 2 @4 ]
+[v _bump `ui  1 e 2 @17 ]
+[v _gas `ui  1 e 2 @15 ]
+"29
+[v _i `uc  1 e 1 @6 ]
 "10 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\Interupt.c
-[v _DELAY `ui  1 e 2 @11 ]
-[v _DELAY0 `ui  1 e 2 @9 ]
-"34 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _DELAY `ui  1 e 2 @9 ]
+[v _DELAY0 `ui  1 e 2 @13 ]
+"82 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
 [v _main `(i  1 e 2 0 ]
 {
-"80
+"87
 [v _i `uc  1 a 1 0 ]
-"106
+"112
 } 1
-"65 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.C
-[v _LCD_Write `(v  1 e 0 0 ]
+"88 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.C
+[v _LCD_Out `(v  1 e 0 0 ]
 {
-[v _c `uc  1 p 1 0 ]
-"72
+"89
+[v _i `uc  1 a 1 0 ]
+[v _A `[5]uc  1 a 5 1 ]
+"88
+[v _DATA `ui  1 p 2 0 ]
+[v _N `uc  1 p 1 2 ]
+"99
+} 6
+"27 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _A2D_Read `(i  1 e 2 0 ]
+{
+"33
 } 0
-"57
+"35 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _init `(v  1 e 0 0 ]
+{
+"76
+} 0
+"57 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.C
 [v _LCD_Move `(v  1 e 0 0 ]
 {
 [v _Row `uc  1 p 1 0 ]
 [v _Col `uc  1 p 1 1 ]
 "62
 } 0
+"65
+[v _LCD_Write `(v  1 e 0 0 ]
+{
+[v _c `uc  1 p 1 0 ]
+"72
+} 0
 "76
 [v _LCD_Init `(v  1 e 0 0 ]
 {
 "85
 } 0
-"47
+"5 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+{
+"7
+[v _counter `uc  1 a 1 0 ]
+"6
+[v _quotient `ui  1 a 2 1 ]
+"5
+[v _dividend `ui  1 p 2 0 ]
+[v _divisor `ui  1 p 2 2 ]
+"26
+} 3
+"5 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+{
+"6
+[v _counter `uc  1 a 1 0 ]
+"5
+[v _dividend `ui  1 p 2 0 ]
+[v _divisor `ui  1 p 2 2 ]
+"21
+} 1
+"47 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.C
 [v _LCD_Inst `(v  1 e 0 0 ]
 {
 [v _c `uc  1 p 1 0 ]
 "54
+} 0
+"35
+[v _LCD_Strobe `(v  1 e 0 0 ]
+{
+"42
 } 0
 "19
 [v _Wait_ms `(v  1 e 0 0 ]
@@ -161,11 +221,6 @@
 [v _X `ui  1 p 2 0 ]
 "24
 } 4
-"35
-[v _LCD_Strobe `(v  1 e 0 0 ]
-{
-"42
-} 0
 "28
 [v _LCD_Pause `(v  1 e 0 0 ]
 {

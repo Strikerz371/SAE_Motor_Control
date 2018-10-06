@@ -22,17 +22,17 @@ const unsigned char MSG4[20] = "LOW  POWER        ";
 const unsigned char MSG5[20] = "VERY FAST         ";
 const unsigned char MSG6[20] = "FAST              ";
 const unsigned char MSG7[20] = "SLOW              ";
+int A2D;
 
 unsigned int time, bump, gas, on, lit,pump;
 
 unsigned char i;
  
 ///////////////////////////////////////////////////////////////
-//	Main
+//	Init
 ///////////////////////////////////////////////////////////////
-main(void)
+void init (void)
 {
-
 	
 	LCD_Init();
 
@@ -62,45 +62,51 @@ main(void)
 
 
 
-	LCD_Move(1,1);
+	LCD_Move(1,0);
 	for (i=0; i<20; i++)
 		{
 		LCD_Write(MSG7[i]); // slow
 		}
 
-	LCD_Move(0,0);
-	for (i=0; i<20; i++)
-		{ 
-		 LCD_Write(MSG2[i]); //full power
-	}
+	//LCD_Move(0,0);
+	//for (i=0; i<20; i++)
+	//	{ 
+	//	 LCD_Write(MSG2[i]); //full power
+	//	}
+}
 	
+///////////////////////////////////////////////////////////////
+//	Main
+///////////////////////////////////////////////////////////////
+main(void)
+{
+	init();
 				
 	while(1){
-		RC5=!RC5;
-		unsigned char i;
-		
-	
-	
-				if(RB0 == 1){
-					bump = 0;
-					gas = 0;
-					pump = 1;
-					LCD_Move(0,0);
-					for (i=0; i<20; i++){
-						 LCD_Write(MSG1[i]); //On
-					}
-				}
-				if(RB1 == 1){
-					bump = 1;
-					gas = 1;
-					pump =0;
-					LCD_Move(0,0);
-					for (i=0; i<20; i++){ 
-						 LCD_Write(MSG2[i]); //off
-					}
-				}
-				
-	
-				
+		RC1=!RC1;
+		unsigned char i =0;
+
+///Display value of A2D////////////////////////////////////////
+LCD_Move(0,0);
+A2D = A2D_Read();
+LCD_Out(A2D, 0);
+
+///////////////////////////////////////////////////////////////
+	if(RB0 == 1)
+	{
+		LCD_Move(0,0);
+		for (i=0; i<20; i++){
+			 LCD_Write(MSG1[i]); //On
 		}
+	}
+	if(RB1 == 1){
+		LCD_Move(0,0);
+		for (i=0; i<20; i++){ 
+			 LCD_Write(MSG2[i]); //off
+		}
+	}
+				
+	
+				
+	}
 }

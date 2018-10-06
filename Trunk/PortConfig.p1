@@ -11,7 +11,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISE `VNuc 0 e@3990 ]
 "90 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
 [v _ADCON1 `Nuc 0 e@4033 ]
-"12 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+"13 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
 [v _A2D_Read `(i 0 ef ]
 "150 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
 [v _PORTC `VNuc 0 e@3970 ]
@@ -1045,95 +1045,95 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 593: extern unsigned long checksum32(unsigned long startAddr, unsigned long length);
 [; ;pic18.h: 606: extern void _delay(unsigned long);
 [; ;pic18.h: 608: extern void _delay3(unsigned char);
-"5 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+"6 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
 [v _PortInit `(v 1 ef ]
 {
-[; ;PortConfig.c: 4: void PortInit (void)
-[; ;PortConfig.c: 5: {
+[; ;PortConfig.c: 5: void PortInit (void)
+[; ;PortConfig.c: 6: {
 [e :U _PortInit ]
 [f ]
-[; ;PortConfig.c: 6: TRISA = 1;
-"6
-[e = _TRISA -> -> 1 `i `uc ]
-[; ;PortConfig.c: 7: TRISB = 0xFF;
+[; ;PortConfig.c: 7: TRISA = 1;
 "7
-[e = _TRISB -> -> 255 `i `uc ]
-[; ;PortConfig.c: 8: TRISC = 0;
+[e = _TRISA -> -> 1 `i `uc ]
+[; ;PortConfig.c: 8: TRISB = 0xFF;
 "8
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;PortConfig.c: 9: TRISD = 0;
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;PortConfig.c: 9: TRISC = 0;
 "9
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;PortConfig.c: 10: TRISE = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;PortConfig.c: 10: TRISD = 0;
 "10
-[e = _TRISE -> -> 0 `i `uc ]
-[; ;PortConfig.c: 11: ADCON1 = 0x0F;
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;PortConfig.c: 11: TRISE = 0;
 "11
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;PortConfig.c: 12: A2D_Read();
+[e = _TRISE -> -> 0 `i `uc ]
+[; ;PortConfig.c: 12: ADCON1 = 0x0F;
 "12
-[e ( _A2D_Read ..  ]
-[; ;PortConfig.c: 13: PORTC = 0;
+[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;PortConfig.c: 13: A2D_Read();
 "13
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;PortConfig.c: 14: }
+[e ( _A2D_Read ..  ]
+[; ;PortConfig.c: 14: PORTC = 0;
 "14
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;PortConfig.c: 15: }
+"15
 [e :UE 109 ]
 }
-"17
+"18
 [v _A2D_Init `(v 1 ef ]
 {
-[; ;PortConfig.c: 16: void A2D_Init(void)
-[; ;PortConfig.c: 17: {
+[; ;PortConfig.c: 17: void A2D_Init(void)
+[; ;PortConfig.c: 18: {
 [e :U _A2D_Init ]
 [f ]
-[; ;PortConfig.c: 18: TRISA = 0xFF;
-"18
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;PortConfig.c: 19: TRISE = 0x0F;
+[; ;PortConfig.c: 19: TRISA = 0xFF;
 "19
-[e = _TRISE -> -> 15 `i `uc ]
-[; ;PortConfig.c: 20: ADCON2 = 0x85;
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;PortConfig.c: 20: TRISE = 0x0F;
 "20
-[e = _ADCON2 -> -> 133 `i `uc ]
-[; ;PortConfig.c: 21: ADCON1 = 0x07;
+[e = _TRISE -> -> 15 `i `uc ]
+[; ;PortConfig.c: 21: ADCON2 = 0x85;
 "21
-[e = _ADCON1 -> -> 7 `i `uc ]
-[; ;PortConfig.c: 22: ADCON0 = 0x01;
+[e = _ADCON2 -> -> 133 `i `uc ]
+[; ;PortConfig.c: 22: ADCON1 = 0x07;
 "22
-[e = _ADCON0 -> -> 1 `i `uc ]
-[; ;PortConfig.c: 23: }
+[e = _ADCON1 -> -> 7 `i `uc ]
+[; ;PortConfig.c: 23: ADCON0 = 0x01;
 "23
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;PortConfig.c: 24: }
+"24
 [e :UE 110 ]
 }
-"26
+"27
 [v _A2D_Read `(i 1 ef ]
 {
-[; ;PortConfig.c: 25: int A2D_Read(void)
-[; ;PortConfig.c: 26: {
+[; ;PortConfig.c: 26: int A2D_Read(void)
+[; ;PortConfig.c: 27: {
 [e :U _A2D_Read ]
 [f ]
-"27
-[v _result `ui 1 a ]
-[; ;PortConfig.c: 27: unsigned int result;
-[; ;PortConfig.c: 28: ADCON0 = 0x01;
 "28
-[e = _ADCON0 -> -> 1 `i `uc ]
-[; ;PortConfig.c: 29: GODONE = 1;
+[v _result `ui 1 a ]
+[; ;PortConfig.c: 28: unsigned int result;
+[; ;PortConfig.c: 29: ADCON0 = 0x01;
 "29
-[e = _GODONE -> -> 1 `i `b ]
-[; ;PortConfig.c: 30: while(GODONE);
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;PortConfig.c: 30: GODONE = 1;
 "30
+[e = _GODONE -> -> 1 `i `b ]
+[; ;PortConfig.c: 31: while(GODONE);
+"31
 [e $U 112  ]
 [e :U 113 ]
 [e :U 112 ]
 [e $ _GODONE 113  ]
 [e :U 114 ]
-[; ;PortConfig.c: 31: return(ADRES);
-"31
+[; ;PortConfig.c: 32: return(ADRES);
+"32
 [e ) -> _ADRES `i ]
 [e $UE 111  ]
-[; ;PortConfig.c: 32: }
-"32
+[; ;PortConfig.c: 33: }
+"33
 [e :UE 111 ]
 }
