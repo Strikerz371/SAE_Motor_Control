@@ -1,0 +1,111 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"4 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _TRISB `i 1 e ]
+"5 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _TRISC `i 1 e ]
+"6 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _TRISD `i 1 e ]
+"7 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _TRISE `i 1 e ]
+"8 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _ADCON1 `i 1 e ]
+"10 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+[v _PORTC `i 1 e ]
+[; ;PortConfig.c: 1: (void) PortInit (void)
+[; ;PortConfig.c: 2: {
+[; ;PortConfig.c: 3: TRISA = 1;
+[i _TRISB
+"4 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.c
+-> 255 `i
+]
+[; ;PortConfig.c: 4: TRISB = 0xFF;
+[i _TRISC
+"5
+-> 0 `i
+]
+[; ;PortConfig.c: 5: TRISC = 0;
+[i _TRISD
+"6
+-> 0 `i
+]
+[; ;PortConfig.c: 6: TRISD = 0;
+[i _TRISE
+"7
+-> 0 `i
+]
+[; ;PortConfig.c: 7: TRISE = 0;
+[i _ADCON1
+"8
+-> 15 `i
+]
+[; ;PortConfig.c: 8: ADCON1 = 0x0F;
+[; ;PortConfig.c: 9: A2D_Read();
+[i _PORTC
+"10
+-> 0 `i
+]
+[; ;PortConfig.c: 10: PORTC = 0;
+[; ;PortConfig.c: 11: }
+"14
+[v _A2D_Init `(v 1 ef ]
+{
+[; ;PortConfig.c: 13: void A2D_Init(void)
+[; ;PortConfig.c: 14: {
+[e :U _A2D_Init ]
+[f ]
+[; ;PortConfig.c: 15: TRISA = 0xFF;
+[v _TRISA `i 1 s ]
+"15
+[e = _TRISA -> 255 `i ]
+[; ;PortConfig.c: 16: TRISE = 0x0F;
+"16
+[e = _TRISE -> 15 `i ]
+[; ;PortConfig.c: 17: ADCON2 = 0x85;
+[v _ADCON2 `i 1 s ]
+"17
+[e = _ADCON2 -> 133 `i ]
+[; ;PortConfig.c: 18: ADCON1 = 0x07;
+"18
+[e = _ADCON1 -> 7 `i ]
+[; ;PortConfig.c: 19: ADCON0 = 0x01;
+[v _ADCON0 `i 1 s ]
+"19
+[e = _ADCON0 -> 1 `i ]
+[; ;PortConfig.c: 20: }
+"20
+[e :UE 1 ]
+}
+"23
+[v _A2D_Read `(i 1 ef ]
+{
+[; ;PortConfig.c: 22: unsigned int A2D_Read(void)
+[; ;PortConfig.c: 23: {
+[e :U _A2D_Read ]
+[f ]
+"24
+[v _result `ui 1 a ]
+[; ;PortConfig.c: 24: unsigned int result;
+[; ;PortConfig.c: 25: ADCON0 = 0x01;
+[v _ADCON0 `i 1 s ]
+"25
+[e = _ADCON0 -> 1 `i ]
+[; ;PortConfig.c: 26: GODONE = 1;
+[v _GODONE `i 1 s ]
+"26
+[e = _GODONE -> 1 `i ]
+[; ;PortConfig.c: 27: while(GODONE);
+"27
+[e $U 3  ]
+[e :U 4 ]
+[e :U 3 ]
+[e $ != _GODONE -> 0 `i 4  ]
+[e :U 5 ]
+[; ;PortConfig.c: 28: return(ADRES);
+[v _ADRES `i 1 s ]
+"28
+[e ) _ADRES ]
+[e $UE 2  ]
+[; ;PortConfig.c: 29: }
+"29
+[e :UE 2 ]
+}
