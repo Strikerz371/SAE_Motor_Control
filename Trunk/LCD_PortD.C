@@ -12,6 +12,7 @@
 //    11/05/00   Clean up LCD routine to use less RAM
 //    10/14/14   Modified for new PIC boards
 
+#include <pic18.h>
 #include "LCD_PortD.h"
 
 void Wait_ms(unsigned int X)

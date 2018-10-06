@@ -1,4 +1,7 @@
-(void) PortInit (void)
+#include <pic18.h>
+
+
+void PortInit (void)
 {
 	TRISA = 1;
 	TRISB = 0xFF;
@@ -12,19 +15,19 @@
 
 void A2D_Init(void)
 {
- TRISA = 0xFF;
- TRISE = 0x0F;
- ADCON2 = 0x85;
- ADCON1 = 0x07;
- ADCON0 = 0x01;
+	 TRISA = 0xFF;
+	 TRISE = 0x0F;
+	 ADCON2 = 0x85;
+	 ADCON1 = 0x07;
+	 ADCON0 = 0x01;
  }
 
-unsigned int A2D_Read(void)
+int A2D_Read(void)
 {
- unsigned int result;
- ADCON0 = 0x01; // Select channel 0, turn on, CLK/32
- GODONE = 1; // Start conversions
- while(GODONE); // wait until done (approx 8us)
- return(ADRES); // and return the result
+	 unsigned int result;
+	 ADCON0 = 0x01; // Select channel 0, turn on, CLK/32
+	 GODONE = 1; // Start conversions
+	 while(GODONE); // wait until done (approx 8us)
+	 return(ADRES); // and return the result
 }
 

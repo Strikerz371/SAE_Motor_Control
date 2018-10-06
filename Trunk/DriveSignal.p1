@@ -1,4 +1,35 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"18 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _MSG1 `Cuc -> 20 `i e ]
+"19 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _MSG2 `Cuc -> 20 `i e ]
+"20 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _MSG3 `Cuc -> 20 `i e ]
+"21 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _MSG4 `Cuc -> 20 `i e ]
+"22 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _MSG5 `Cuc -> 20 `i e ]
+"23 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _MSG6 `Cuc -> 20 `i e ]
+"24 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _MSG7 `Cuc -> 20 `i e ]
+"26 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _time `ui 1 e ]
+"26 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _bump `ui 1 e ]
+"26 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _gas `ui 1 e ]
+"26 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _on `ui 1 e ]
+"26 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _lit `ui 1 e ]
+"26 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _pump `ui 1 e ]
+"28 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _i `uc 1 e ]
+[p mainexit ]
+"14 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.h
+[v _LCD_Init `(v 0 ef ]
 "201 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
 [v _T0CS `Nb 0 e@32429 ]
 "66 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
@@ -25,10 +56,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _GIE `Nb 0 e@32663 ]
 "650 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
 [v _RA3 `VNb 0 e@31747 ]
-"64 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
-[v _LCD_Move `(i 0 ef ]
-"67 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
-[v _LCD_Write `(i 0 ef ]
+"10 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.h
+[v _LCD_Move `(v 0 ef2`uc`uc ]
+"12 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\LCD_PortD.h
+[v _LCD_Write `(v 0 ef1`uc ]
 "632 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
 [v _RC5 `VNb 0 e@31765 ]
 "637 E:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
@@ -1057,26 +1088,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 593: extern unsigned long checksum32(unsigned long startAddr, unsigned long length);
 [; ;pic18.h: 606: extern void _delay(unsigned long);
 [; ;pic18.h: 608: extern void _delay3(unsigned char);
-"4 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\PortConfig.h
-[v _PortInit `(v 1 ef ]
-{
-[; ;PortConfig.h: 2: void PortInit (void)
-[; ;PortConfig.h: 4: void A2D_Init(void)
-[e :U _PortInit ]
-[; ;PortConfig.h: 6: unsigned int A2D_Read(void)
-[; ;LCD_PortD.h: 2: void Wait_ms(unsigned int X)
-[; ;LCD_PortD.h: 4: void LCD_Pause(void)
-[; ;LCD_PortD.h: 6: void LCD_Strobe(void)
-[; ;LCD_PortD.h: 8: void LCD_Inst(unsigned char c)
-[; ;LCD_PortD.h: 10: void LCD_Move(unsigned char Row, unsigned char Col)
-[; ;LCD_PortD.h: 12: void LCD_Write(unsigned char c)
-[; ;LCD_PortD.h: 14: void LCD_Init(void)
+[; ;PortConfig.h: 2: void PortInit (void);
+[; ;PortConfig.h: 4: void A2D_Init(void);
+[; ;PortConfig.h: 6: unsigned int A2D_Read(void);
+[; ;LCD_PortD.h: 2: void Wait_ms(unsigned int X);
+[; ;LCD_PortD.h: 4: void LCD_Pause(void);
+[; ;LCD_PortD.h: 6: void LCD_Strobe(void);
+[; ;LCD_PortD.h: 8: void LCD_Inst(unsigned char c);
+[; ;LCD_PortD.h: 10: void LCD_Move(unsigned char Row, unsigned char Col);
+[; ;LCD_PortD.h: 12: void LCD_Write(unsigned char c);
+[; ;LCD_PortD.h: 14: void LCD_Init(void);
+[i _MSG1
+:U ..
+-> 79 `c
+-> 70 `c
+-> 70 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
 [; ;DriveSignal.c: 18: const unsigned char MSG1[20] = "OFF               ";
-"18 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
-[f ]
-"19
-[v F1439 `Cuc -> 20 `i s ]
-[i F1439
+[i _MSG2
 :U ..
 -> 70 `c
 -> 85 `c
@@ -1099,12 +1145,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _MSG2 `Cuc -> 20 `i a ]
 [; ;DriveSignal.c: 19: const unsigned char MSG2[20] = "FULL POWER        ";
-[e = _MSG2 F1439 ]
-"20
-[v F1441 `Cuc -> 20 `i s ]
-[i F1441
+[i _MSG3
 :U ..
 -> 77 `c
 -> 73 `c
@@ -1127,12 +1169,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _MSG3 `Cuc -> 20 `i a ]
 [; ;DriveSignal.c: 20: const unsigned char MSG3[20] = "MID  POWER        ";
-[e = _MSG3 F1441 ]
-"21
-[v F1443 `Cuc -> 20 `i s ]
-[i F1443
+[i _MSG4
 :U ..
 -> 76 `c
 -> 79 `c
@@ -1155,12 +1193,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _MSG4 `Cuc -> 20 `i a ]
 [; ;DriveSignal.c: 21: const unsigned char MSG4[20] = "LOW  POWER        ";
-[e = _MSG4 F1443 ]
-"22
-[v F1445 `Cuc -> 20 `i s ]
-[i F1445
+[i _MSG5
 :U ..
 -> 86 `c
 -> 69 `c
@@ -1183,12 +1217,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _MSG5 `Cuc -> 20 `i a ]
 [; ;DriveSignal.c: 22: const unsigned char MSG5[20] = "VERY FAST         ";
-[e = _MSG5 F1445 ]
-"23
-[v F1447 `Cuc -> 20 `i s ]
-[i F1447
+[i _MSG6
 :U ..
 -> 70 `c
 -> 65 `c
@@ -1211,12 +1241,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _MSG6 `Cuc -> 20 `i a ]
 [; ;DriveSignal.c: 23: const unsigned char MSG6[20] = "FAST              ";
-[e = _MSG6 F1447 ]
-"24
-[v F1449 `Cuc -> 20 `i s ]
-[i F1449
+[i _MSG7
 :U ..
 -> 83 `c
 -> 76 `c
@@ -1239,25 +1265,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _MSG7 `Cuc -> 20 `i a ]
 [; ;DriveSignal.c: 24: const unsigned char MSG7[20] = "SLOW              ";
-[e = _MSG7 F1449 ]
-"26
-[v _time `ui 1 a ]
-[v _bump `ui 1 a ]
-[v _DELAY `ui 1 a ]
-[v _DELAY0 `ui 1 a ]
-[v _gas `ui 1 a ]
-[v _on `ui 1 a ]
-[v _lit `ui 1 a ]
-[v _pump `ui 1 a ]
-"28
-[v _i `uc 1 a ]
-[; ;DriveSignal.c: 26: unsigned int time, bump, DELAY,DELAY0, gas, on, lit,pump;
+[; ;DriveSignal.c: 26: unsigned int time, bump, gas, on, lit,pump;
 [; ;DriveSignal.c: 28: unsigned char i;
-[; ;DriveSignal.c: 34: Init(void)
-[; ;DriveSignal.c: 35: {
+"34 E:\Users\brett\Projects\GitHub\SAE_Motor_Control\Trunk\DriveSignal.c
+[v _main `(i 1 ef ]
+{
+[; ;DriveSignal.c: 33: main(void)
+[; ;DriveSignal.c: 34: {
+[e :U _main ]
+[f ]
 [; ;DriveSignal.c: 37: LCD_Init();
+"37
+[e ( _LCD_Init ..  ]
 [; ;DriveSignal.c: 43: T0CS = 0;
 "43
 [e = _T0CS -> -> 0 `i `b ]
@@ -1294,161 +1314,160 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;DriveSignal.c: 57: TMR2IP = 1;
 "57
 [e = _TMR2IP -> -> 1 `i `b ]
-[; ;DriveSignal.c: 59: GIE = 1;
-"59
-[e = _GIE -> -> 1 `i `b ]
-[; ;DriveSignal.c: 60: RA3=1;
+[; ;DriveSignal.c: 60: GIE = 1;
 "60
+[e = _GIE -> -> 1 `i `b ]
+[; ;DriveSignal.c: 61: RA3=1;
+"61
 [e = _RA3 -> -> 1 `i `b ]
-[; ;DriveSignal.c: 64: LCD_Move(1,1);
-"64
-[e ( _LCD_Move , -> 1 `i -> 1 `i ]
-[; ;DriveSignal.c: 65: for (i=0; i<20; i++)
+[; ;DriveSignal.c: 65: LCD_Move(1,1);
 "65
+[e ( _LCD_Move (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;DriveSignal.c: 66: for (i=0; i<20; i++)
+"66
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 20 `i 110  ]
 [e $U 111  ]
-"66
-[e :U 110 ]
-[; ;DriveSignal.c: 66: {
-{
-[; ;DriveSignal.c: 67: LCD_Write(MSG7[i]);
 "67
-[e ( _LCD_Write -> *U + &U _MSG7 * -> _i `ux -> -> # *U &U _MSG7 `ui `ux `i ]
+[e :U 110 ]
+[; ;DriveSignal.c: 67: {
+{
+[; ;DriveSignal.c: 68: LCD_Write(MSG7[i]);
 "68
+[e ( _LCD_Write (1 *U + &U _MSG7 * -> _i `ux -> -> # *U &U _MSG7 `ui `ux ]
+"69
 }
-"65
+"66
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 20 `i 110  ]
 [e :U 111 ]
-"68
+"69
 }
-[; ;DriveSignal.c: 68: }
-[; ;DriveSignal.c: 70: LCD_Move(0,0);
-"70
-[e ( _LCD_Move , -> 0 `i -> 0 `i ]
-[; ;DriveSignal.c: 71: for (i=0; i<20; i++)
+[; ;DriveSignal.c: 69: }
+[; ;DriveSignal.c: 71: LCD_Move(0,0);
 "71
+[e ( _LCD_Move (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;DriveSignal.c: 72: for (i=0; i<20; i++)
+"72
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 20 `i 113  ]
 [e $U 114  ]
-"72
-[e :U 113 ]
-[; ;DriveSignal.c: 72: {
-{
-[; ;DriveSignal.c: 73: LCD_Write(MSG2[i]);
 "73
-[e ( _LCD_Write -> *U + &U _MSG2 * -> _i `ux -> -> # *U &U _MSG2 `ui `ux `i ]
+[e :U 113 ]
+[; ;DriveSignal.c: 73: {
+{
+[; ;DriveSignal.c: 74: LCD_Write(MSG2[i]);
 "74
+[e ( _LCD_Write (1 *U + &U _MSG2 * -> _i `ux -> -> # *U &U _MSG2 `ui `ux ]
+"75
 }
-"71
+"72
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 20 `i 113  ]
 [e :U 114 ]
-"74
+"75
 }
-[; ;DriveSignal.c: 74: }
-[; ;DriveSignal.c: 77: while(1){
-"77
+[; ;DriveSignal.c: 75: }
+[; ;DriveSignal.c: 78: while(1){
+"78
 [e :U 117 ]
 {
-[; ;DriveSignal.c: 78: RC5=!RC5;
-"78
-[e = _RC5 ! _RC5 ]
+[; ;DriveSignal.c: 79: RC5=!RC5;
 "79
+[e = _RC5 ! _RC5 ]
+"80
 [v _i `uc 1 a ]
-[; ;DriveSignal.c: 79: unsigned char i;
-[; ;DriveSignal.c: 83: if(RB0 == 1){
-"83
+[; ;DriveSignal.c: 80: unsigned char i;
+[; ;DriveSignal.c: 84: if(RB0 == 1){
+"84
 [e $ ! == -> _RB0 `i -> 1 `i 119  ]
 {
-[; ;DriveSignal.c: 84: bump = 0;
-"84
-[e = _bump -> -> 0 `i `ui ]
-[; ;DriveSignal.c: 85: gas = 0;
+[; ;DriveSignal.c: 85: bump = 0;
 "85
-[e = _gas -> -> 0 `i `ui ]
-[; ;DriveSignal.c: 86: pump = 1;
+[e = _bump -> -> 0 `i `ui ]
+[; ;DriveSignal.c: 86: gas = 0;
 "86
-[e = _pump -> -> 1 `i `ui ]
-[; ;DriveSignal.c: 87: LCD_Move(0,0);
+[e = _gas -> -> 0 `i `ui ]
+[; ;DriveSignal.c: 87: pump = 1;
 "87
-[e ( _LCD_Move , -> 0 `i -> 0 `i ]
-[; ;DriveSignal.c: 88: for (i=0; i<20; i++){
+[e = _pump -> -> 1 `i `ui ]
+[; ;DriveSignal.c: 88: LCD_Move(0,0);
 "88
+[e ( _LCD_Move (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;DriveSignal.c: 89: for (i=0; i<20; i++){
+"89
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 20 `i 120  ]
 [e $U 121  ]
 [e :U 120 ]
 {
-[; ;DriveSignal.c: 89: LCD_Write(MSG1[i]);
-[v _MSG1 `i 1 s ]
-"89
-[e ( _LCD_Write *U + -> _MSG1 `ux -> _i `ux ]
+[; ;DriveSignal.c: 90: LCD_Write(MSG1[i]);
 "90
+[e ( _LCD_Write (1 *U + &U _MSG1 * -> _i `ux -> -> # *U &U _MSG1 `ui `ux ]
+"91
 }
-"88
+"89
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 20 `i 120  ]
 [e :U 121 ]
-"90
-}
 "91
 }
-[e :U 119 ]
-[; ;DriveSignal.c: 90: }
-[; ;DriveSignal.c: 91: }
-[; ;DriveSignal.c: 92: if(RB1 == 1){
 "92
+}
+[e :U 119 ]
+[; ;DriveSignal.c: 91: }
+[; ;DriveSignal.c: 92: }
+[; ;DriveSignal.c: 93: if(RB1 == 1){
+"93
 [e $ ! == -> _RB1 `i -> 1 `i 123  ]
 {
-[; ;DriveSignal.c: 93: bump = 1;
-"93
-[e = _bump -> -> 1 `i `ui ]
-[; ;DriveSignal.c: 94: gas = 1;
+[; ;DriveSignal.c: 94: bump = 1;
 "94
-[e = _gas -> -> 1 `i `ui ]
-[; ;DriveSignal.c: 95: pump =0;
+[e = _bump -> -> 1 `i `ui ]
+[; ;DriveSignal.c: 95: gas = 1;
 "95
-[e = _pump -> -> 0 `i `ui ]
-[; ;DriveSignal.c: 96: LCD_Move(0,0);
+[e = _gas -> -> 1 `i `ui ]
+[; ;DriveSignal.c: 96: pump =0;
 "96
-[e ( _LCD_Move , -> 0 `i -> 0 `i ]
-[; ;DriveSignal.c: 97: for (i=0; i<20; i++){
+[e = _pump -> -> 0 `i `ui ]
+[; ;DriveSignal.c: 97: LCD_Move(0,0);
 "97
+[e ( _LCD_Move (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;DriveSignal.c: 98: for (i=0; i<20; i++){
+"98
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 20 `i 124  ]
 [e $U 125  ]
 [e :U 124 ]
 {
-[; ;DriveSignal.c: 98: LCD_Write(MSG2[i]);
-"98
-[e ( _LCD_Write -> *U + &U _MSG2 * -> _i `ux -> -> # *U &U _MSG2 `ui `ux `i ]
+[; ;DriveSignal.c: 99: LCD_Write(MSG2[i]);
 "99
+[e ( _LCD_Write (1 *U + &U _MSG2 * -> _i `ux -> -> # *U &U _MSG2 `ui `ux ]
+"100
 }
-"97
+"98
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 20 `i 124  ]
 [e :U 125 ]
-"99
-}
 "100
 }
+"101
+}
 [e :U 123 ]
-"104
+"105
 }
 [e :U 116 ]
-"77
+"78
 [e $U 117  ]
 [e :U 118 ]
-[; ;DriveSignal.c: 99: }
 [; ;DriveSignal.c: 100: }
-[; ;DriveSignal.c: 104: }
+[; ;DriveSignal.c: 101: }
 [; ;DriveSignal.c: 105: }
-"105
+[; ;DriveSignal.c: 106: }
+"106
 [e :UE 109 ]
 }
